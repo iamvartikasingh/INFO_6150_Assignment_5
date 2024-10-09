@@ -14,25 +14,25 @@
         <form id="createAccountForm" onsubmit="return handleSubmit()">
             <div class="form-group">
                 <label for="firstName">First Name:</label>
-                <input type="text" class="form-control" id="firstName" required>
+                <input type="text" class="form-control" id="firstName" required oninput="checkInput()">
                 <small id="firstNameError" class="text-danger"></small>
             </div>
             <div class="form-group">
                 <label for="lastName">Last Name:</label>
-                <input type="text" class="form-control" id="lastName" required>
+                <input type="text" class="form-control" id="lastName" required oninput="checkInput()">
                 <small id="lastNameError" class="text-danger"></small>
             </div>
             <div class="form-group">
                 <label for="age">Age:</label>
-                <input type="number" class="form-control" id="age" required>
+                <input type="number" class="form-control" id="age" required oninput="checkInput()">
             </div>
             <div class="form-group">
                 <label for="username">Username:</label>
-                <input type="text" class="form-control" id="username" required>
+                <input type="text" class="form-control" id="username" required oninput="checkInput()">
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
-                <input type="password" class="form-control" id="password" required>
+                <input type="password" class="form-control" id="password" required oninput="checkInput()">
             </div>
             <button type="submit" class="btn btn-primary" id="submitBtn" disabled>Create Account</button>
         </form>
@@ -42,6 +42,20 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+    <script src="script1.js"></script>
+    
+    <script>
+        function checkInput() {
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const age = document.getElementById('age').value.trim();
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            const submitBtn = document.getElementById('submitBtn');
+            
+            submitBtn.disabled = !(firstName && lastName && age && username && password);
+        }
+    </script>
 </body>
 </html>
