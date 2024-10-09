@@ -13,32 +13,29 @@
  }
  .navbar {
  
-        z-index: 1050; /* A high z-index to make sure navbar is above other content */
-        position: relative; /* Ensure z-index is effective */
+        z-index: 1050; 
+        position: relative; 
     
-        background-color: #043a73; /* Darker blue from the palette */
+        background-color: #043a73; 
         padding: 0;
         font-size: 1.1rem;
       
-        padding: 30px 50px; /* Add more padding for a wider look */
-        height: 80px; /* Increase height of the navbar */
+        padding: 30px 50px; 
+        height: 80px; 
   }
 a.navbar-brand{
     color: white;
 }
-.nav-item{
-   
-}
+
  a.nav-link{
     color: white;
    
 }
 
 
-.navbar-toggler-icon{
-    background-color: #8EACCD;
-    color: white;
-}
+/* .navbar-toggler-icon{
+    color: rgba(20, 1, 15, 0.216);
+} */
   /* Feedback card styling */
   .feedback-card {
     background-color: #D2E0FB; /* Light blue background for the cards */
@@ -75,7 +72,10 @@ a.navbar-brand{
     padding: 20px;
     text-align: center;
   }
+  .navbar-collapse {
+    background-color: #043a73; 
 
+  }
   /* Testimonial carousel styling */
   .testimonial-carousel .carousel-item {
     transition: transform 0.5s ease-in-out;
@@ -127,9 +127,7 @@ a.navbar-brand{
 h1{
     color: #8EACCD;
 }
-.btn{
-    margin:5%;
-}
+
 .btn-info{
     margin: 2% 20%;
     padding: 2%;
