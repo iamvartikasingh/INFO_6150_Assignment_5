@@ -30,6 +30,88 @@ a.navbar-brand{
  a.nav-link{
     color: white;
    
+  
+}
+
+.card {
+  background-color: white;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  color: #5A6782;
+}
+
+.progress-bar {
+  background-color: #28a745;
+}
+
+.badge {
+  font-size: 14px;
+}
+
+.table {
+  color: #5A6782;
+}
+
+.table th {
+  color: #5A6782;
+}
+
+.table tbody tr {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.timeline-item:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #8EACCD;
+  border-radius: 50%;
+}
+
+.carousel-item {
+  font-size: 18px;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer {
+  background-color: #343a40;
+  color: white;
+}
+
+.footer a {
+  color: #c4c4c4;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+.btn-outline-light {
+  border-color: #5A6782;
+}
+
+.btn-outline-light:hover {
+  background-color: #5A6782;
+  color: white;
 }
 
 
