@@ -5,7 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Account</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #e7f0ff; 
+        }
+        .form-control.error {
+            border-color: red;
+            background-color: #ffe6e6; 
+        }
+        .form-control.success {
+            border-color: green;
+            background-color: #d4edda; 
+        }
+    </style>
 </head>
 <body>
 
@@ -25,14 +37,17 @@
             <div class="form-group">
                 <label for="age">Age:</label>
                 <input type="number" class="form-control" id="age" required oninput="checkInput()">
+                <small id="ageError" class="text-danger"></small>
             </div>
             <div class="form-group">
                 <label for="username">Username:</label>
                 <input type="text" class="form-control" id="username" required oninput="checkInput()">
+                <small id="usernameError" class="text-danger"></small>
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
                 <input type="password" class="form-control" id="password" required oninput="checkInput()">
+                <small id="passwordError" class="text-danger"></small>
             </div>
             <button type="submit" class="btn btn-primary" id="submitBtn" disabled>Create Account</button>
         </form>
@@ -53,8 +68,51 @@
             const password = document.getElementById('password').value.trim();
 
             const submitBtn = document.getElementById('submitBtn');
-            
-            submitBtn.disabled = !(firstName && lastName && age && username && password);
+            let isValid = true;
+
+            const namePattern = /^[a-zA-Z ]+$/; 
+            if (firstName.length < 2 || firstName.length > 20 || !namePattern.test(firstName)) {
+                document.getElementById('firstNameError').innerText = "First name must be 2-20 characters and contain no special characters.";
+                isValid = false;
+            } else {
+                document.getElementById('firstNameError').innerText = "";
+            }
+
+            if (lastName.length < 2 || lastName.length > 20 || !namePattern.test(lastName)) {
+                document.getElementById('lastNameError').innerText = "Last name must be 2-20 characters and contain no special characters.";
+                isValid = false;
+            } else {
+                document.getElementById('lastNameError').innerText = "";
+            }
+
+            if (age < 0) {
+                document.getElementById('ageError').innerText = "Age must be a positive number.";
+                isValid = false;
+            } else {
+                document.getElementById('ageError').innerText = "";
+            }
+
+            const usernamePattern = /^[a-zA-Z0-9]+$/;
+            if (username.length < 2 || username.length > 20 || !usernamePattern.test(username)) {
+                document.getElementById('usernameError').innerText = "Username must be 2-20 alphanumeric characters.";
+                isValid = false;
+            } else {
+                document.getElementById('usernameError').innerText = "";
+            }
+
+            const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,}$/;
+            if (!passwordPattern.test(password)) {
+                document.getElementById('passwordError').innerText = "Password must be at least 8 characters long, include 1 uppercase, 1 lowercase, 1 number, and 1 special character.";
+                document.getElementById('password').classList.add("error");
+                document.getElementById('password').classList.remove("success");
+                isValid = false;
+            } else {
+                document.getElementById('passwordError').innerText = "";
+                document.getElementById('password').classList.add("success");
+                document.getElementById('password').classList.remove("error");
+            }
+
+            submitBtn.disabled = !isValid;
         }
     </script>
 </body>
