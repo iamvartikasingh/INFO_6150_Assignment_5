@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function storeCredential(username, password) {
     localStorage.setItem(username, password);
 }
@@ -5,6 +6,14 @@ function storeCredential(username, password) {
 function userAlreadyExists(username) {
     return localStorage.getItem(username) !== null;
 }
+=======
+
+function storeCredential(username, password) {
+    
+    localStorage.setItem(username, password);
+}
+
+>>>>>>> origin/Aditya
 
 function handleSubmit() {
     const firstName = document.getElementById('firstName').value;
@@ -13,6 +22,7 @@ function handleSubmit() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
+<<<<<<< HEAD
 
     if (userAlreadyExists(username)) {
         document.getElementById('message').innerHTML = `<div class="alert alert-warning">Username already exists. Please choose a different one.</div>`;
@@ -29,15 +39,40 @@ function handleSubmit() {
 function validateUser() {
     const username = document.getElementById('loginUsername').value;
     const password = document.getElementById('loginPassword').value;
+=======
+ 
+    storeCredential(username, password);
+
+
+    document.getElementById('message').innerHTML = `<div class="alert alert-success">Account created successfully!</div>`;
+    
+  
+    document.getElementById('createAccountForm').reset();
+
+    window.location.href = 'index.html';
+
+
+    return false;
+}
+
+function validateUser() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+>>>>>>> origin/Aditya
 
     const storedPassword = localStorage.getItem(username);
 
     if (storedPassword && storedPassword === password) {
+<<<<<<< HEAD
         window.location.href = 'dashboard.html';
+=======
+        window.location.href = 'welcome.html';
+>>>>>>> origin/Aditya
     } else {
         document.getElementById('message').innerHTML = `<div class="alert alert-danger">Invalid username or password.</div>`;
     }
 
+<<<<<<< HEAD
     return false;
 }
 function checkLoginInput() {
@@ -65,3 +100,7 @@ function checkLoginInput() {
     return isValid;
 }
 
+=======
+    return false; 
+}
+>>>>>>> origin/Aditya
