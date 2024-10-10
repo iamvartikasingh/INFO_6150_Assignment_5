@@ -1,0 +1,236 @@
+ /* Navbar styling */
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+ *{
+    font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 2rem;
+  font-style: normal;
+  color:white;
+ 
+ }
+ body{
+    background-color: #0a3d4c;
+ }
+ .navbar {
+ 
+        z-index: 1050; 
+        position: relative; 
+    
+        background-color: #043a73; 
+        padding: 0;
+        font-size: 1.1rem;
+      
+        padding: 30px 50px; 
+        height: 80px; 
+  }
+a.navbar-brand{
+    color: white;
+}
+
+ a.nav-link{
+    color: white;
+   
+  
+}
+
+.card {
+  background-color: white;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  color: #5A6782;
+}
+
+.progress-bar {
+  background-color: #28a745;
+}
+
+.badge {
+  font-size: 14px;
+}
+
+.table {
+  color: #5A6782;
+}
+
+.table th {
+  color: #5A6782;
+}
+
+.table tbody tr {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.timeline-item:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #8EACCD;
+  border-radius: 50%;
+}
+
+.carousel-item {
+  font-size: 18px;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer {
+  background-color: #343a40;
+  color: white;
+}
+
+.footer a {
+  color: #c4c4c4;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+.btn-outline-light {
+  border-color: #5A6782;
+}
+
+.btn-outline-light:hover {
+  background-color: #5A6782;
+  color: white;
+}
+
+
+/* .navbar-toggler-icon{
+    color: rgba(20, 1, 15, 0.216);
+} */
+  /* Feedback card styling */
+  .feedback-card {
+    background-color: #D2E0FB; /* Light blue background for the cards */
+    border: none;
+    margin-bottom: 20px;
+  }
+  .feedback-card img {
+    height: 200px;
+    object-fit: cover;
+  }
+  .card-title {
+    color: #8EACCD; /* Darker blue for the titles */
+  }
+  .card-text {
+    color: #333; /* Neutral text color */
+  }
+
+  /* Carousel styling */
+  .carousel-inner img {
+    width: 100%;
+    height: 600px; /* Increased height for carousel images */
+    object-fit: cover;
+  }
+
+  /* Social icons and footer */
+  .social-icon {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    color: rgb(255, 255, 255);
+  }
+  .footer {
+    background-color: #8EACCD;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  .navbar-collapse {
+    background-color: #043a73; 
+
+  }
+  /* Testimonial carousel styling */
+  .testimonial-carousel .carousel-item {
+    transition: transform 0.5s ease-in-out;
+  }
+  .testimonial-carousel .card-body {
+    background-color: #FEF9D9; /* Light yellow background inside the cards */
+  }
+  /* Style for feedback cards */
+.feedback-card {
+    width: 20rem; /* Smaller width for the cards */
+    height: 30rem; /* Smaller height for the cards */
+    background-color: #D2E0FB; /* Light blue background */
+    border: none; /* No border */
+    margin-bottom: 20px; /* Spacing between the cards */
+  }
+  
+  /* Style for card images */
+  .feedback-card img {
+    height: 20rem; /* Smaller height for the images */
+    object-fit: cover; /* Ensures image fits nicely */
+  }
+  
+  /* Style for card title and text */
+  .feedback-card .card-title {
+    color: #8EACCD; /* Darker blue for the title */
+    font-size: 1.1rem; /* Slightly smaller title */
+  }
+  
+  .feedback-card .card-text {
+    font-size: 0.9rem; /* Smaller text to fit the card */
+    color: #333; /* Neutral text color */
+  }
+  
+  /* Padding and margin for section container */
+  section.container {
+    padding: 40px; /* Add padding inside the container */
+    margin-top: 50px; /* Add margin above the section */
+    margin-bottom: 50px; /* Add margin below the section */
+  }
+
+  .accordion{
+    margin:2% 10%;
+  }
+
+.accordion-body{
+    color: #0a3d4c;
+}
+
+h1{
+    color: #8EACCD;
+}
+
+.btn-info{
+    margin: 2% 20%;
+    padding: 2%;
+    width: 20%;
+}
+
+.btn-custom-join {
+    background-color: #c1d8e7; /* Green */
+    border-color: #6e90a0; /* Green Border */
+}
+
+.btn-custom-contact {
+    background-color: #69a9c5; /* Red */
+    border-color: hsl(199, 71%, 28%); /* Red Border */
+}
+
+/* Optional: Define hover states */
+.btn-custom-join:hover {
+    background-color: #a9e2ee; /* Darker green */
+}
+
+.btn-custom-contact:hover {
+    background-color: #d3aeae; /* Darker red */
+}
