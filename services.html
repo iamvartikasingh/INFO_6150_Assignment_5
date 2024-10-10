@@ -52,7 +52,17 @@
       </div>
     </div>
   </nav>
-  
+<div class="toast" id="liveToast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <strong class="me-auto">Notification</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      You have a new message from your therapist!
+    </div>
+  </div>
+  <button type="button" class="btn btn-primary mt-3" onclick="document.getElementById('liveToast').classList.add('show');">Show Notification</button>
+ 
  <!-- Main Content Section -->
     <div class="container mt-5">
         <h1 class="text-center mb-5">Mental Health Services</h1>

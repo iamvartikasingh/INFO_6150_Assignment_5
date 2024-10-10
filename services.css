@@ -152,3 +152,50 @@ h1{
 .btn-custom-contact:hover {
     background-color: #d3aeae; /* Darker red */
 }
+.toast {
+  position: absolute;
+  top: 70px; /* Adjust to position below the navbar */
+  right: 20px; /* Space from the right edge */
+  z-index: 1050; /* Ensure it's above other content */
+  display: none; /* Initially hidden */
+}
+
+.toast.show {
+  display: block; /* Show when the class is added */
+}
+
+/* Style for the button position */
+.toast {
+  position: absolute;
+  top: 70px; /* Adjust to position below the navbar */
+  right: 20px; /* Space from the right edge */
+  z-index: 1050; /* Ensure it's above other content */
+  display: none; /* Initially hidden */
+}
+
+.toast.show {
+  display: block; /* Show when the class is added */
+}
+
+/* Style for the button position */
+.toast-button {
+  position: absolute;
+  top: 70px; /* Same as toast to align vertically */
+  right: 20px; /* Adjust this value to position the button correctly */
+  z-index: 1050; /* Ensure it's above other content */
+}
+
+/* Change text color in the toast body to black */
+.toast-body {
+  color: black; /* Set the text color to black */
+}
+
+/* Change text color in the toast header to black */
+.toast-header {
+  color: black; /* Set the header text color to black */
+}
+
+/* Change text color of the strong element to black */
+.toast-header strong {
+  color: black; /* Set the strong text color to black */
+}
